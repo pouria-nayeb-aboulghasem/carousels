@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: darkslategray;
+    font-family: "Poppins", sans-serif;
+    color: #f1f1f1;
+}
+
+ul {
+    list-style-type: none;
+}
+.brand__container {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.brand__content {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.brand__title {
+    font-size: 3.5vmax;
+    margin-block: 1.5rem;
+}
+
+.brand__list {
+    display: flex;
+    gap: 1rem;
+}
+
+.brand__item {
+    text-wrap: nowrap;
+    width: 275px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.brand__img {
+    width: 100%;
+}
+
+/* animation handler */
+.scroller {
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.scroller[data-animated="true"] {
+    overflow-x: hidden;
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller__inner {
+    padding-block: 0.5rem;
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+    flex-wrap: nowrap;
+    width: max-content;
+    animation: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-animated="true"]:hover .scroller__inner {
+    animation-play-state: paused;
+}
+
+.scroller[data-speed="fast"] {
+    --animation-duration: 40s;
+}
+
+.scroller[data-direction="right"] {
+    --animation-direction: reverse;
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.25rem));
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .scroller {
+        max-width: 250px;
+    }
+
+    .brand__item {
+        width: 210px;
+    }
+}
+
+@media screen and (min-width: 399px) {
+    .scroller {
+        max-width: 400px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .scroller {
+        max-width: 768px;
+    }
+
+    .brand__item {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1099px) {
+    .scroller {
+        max-width: 1100px;
+    }
+
+    .brand__item {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1299px) {
+    .scroller {
+        max-width: 1300px;
+    }
+}
+
+@media screen and (min-width: 1499px) {
+    .scroller {
+        max-width: min-content;
+    }
+
+    .brand__item {
+        width: 480px;
+    }
+}
+
+
