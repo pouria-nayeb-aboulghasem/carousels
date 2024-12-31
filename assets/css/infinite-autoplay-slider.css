@@ -43,7 +43,7 @@ ul {
 
 .brand__item {
     text-wrap: nowrap;
-    width: 275px;
+    width: 300px;
     border-radius: 8px;
     overflow: hidden;
 }
@@ -54,7 +54,7 @@ ul {
 
 /* animation handler */
 .scroller {
-    max-width: 1100px;
+    max-width: min-content;
     margin-inline: auto;
 }
 
@@ -91,53 +91,13 @@ ul {
     }
 }
 
-@media screen and (max-width: 399px) {
-    .scroller {
-        max-width: 250px;
-    }
-
+@media screen and (max-width: 520px) {
     .brand__item {
-        width: 210px;
-    }
-}
-
-@media screen and (min-width: 399px) {
-    .scroller {
-        max-width: 400px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .scroller {
-        max-width: 768px;
-    }
-
-    .brand__item {
-        width: 300px;
-    }
-}
-
-@media screen and (min-width: 1099px) {
-    .scroller {
-        max-width: 1100px;
-    }
-
-    .brand__item {
-        width: 300px;
-    }
-}
-
-@media screen and (min-width: 1299px) {
-    .scroller {
-        max-width: 1300px;
+        width: 250px;
     }
 }
 
 @media screen and (min-width: 1499px) {
-    .scroller {
-        max-width: min-content;
-    }
-
     .brand__item {
         width: 480px;
     }
